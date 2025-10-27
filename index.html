@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PneumoDetect: موقع لتشخيص الالتهاب الرئوي باستخدام الذكاء الاصطناعي من خلال تحليل صور الأشعة السينية">
+  <title>PneumoDetect – تشخيص الالتهاب الرئوي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>PneumoDetect</h1>
+    <p class="lang-text" data-ar="تشخيص الالتهاب الرئوي باستخدام الذكاء الاصطناعي" data-en="Pneumonia Detection using AI">تشخيص الالتهاب الرئوي باستخدام الذكاء الاصطناعي</p>
+
+    <!-- تبديل اللغة -->
+    <div class="lang-toggle">
+      <button class="active" onclick="setLanguage('ar')">العربية</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <button><a href="#home" class="lang-text" data-ar="الرئيسية" data-en="Home">الرئيسية</a></button>
+    <button><a href="#about" class="lang-text" data-ar="حول" data-en="About">حول</a></button>
+    <button><a href="#phases" class="lang-text" data-ar="مراحل المرض" data-en="Phases">مراحل المرض</a></button>
+    <button><a href="#symptoms" class="lang-text" data-ar="الأعراض" data-en="Symptoms">الأعراض</a></button>
+    <button><a href="#treatment" class="lang-text" data-ar="العلاج" data-en="Treatment">العلاج</a></button>
+    <button><a href="#upload" class="lang-text" data-ar="رفع صورة" data-en="Upload Image">رفع صورة</a></button>
+  </nav>
+
+  <div class="background-image">
+    <h1 class="lang-text" data-ar="فحص الأشعة السينية" data-en="X-Ray Examination">فحص الأشعة السينية</h1>
+  </div>
+
+  <!-- قسم حول -->
+  <section id="about">
+    <h2 class="lang-text" data-ar="عوامل الالتهاب الرئوي" data-en="Pneumonia Factors">عوامل الالتهاب الرئوي</h2>
+    <div class="container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="card-image" src="https://i.ibb.co/0J0qV2q/biology.jpg" alt="عوامل بيولوجية" loading="lazy">
+          </div>
+          <div class="flip-card-back">
+            <h3 class="lang-text" data-ar="عوامل بيولوجية" data-en="Biological Factors">عوامل بيولوجية</h3>
+            <p class="lang-text" data-ar="بعض الأشخاص لديهم استعداد جيني يجعلهم أكثر عرضة للإصابة بالتهاب رئوي أو مضاعفات." data-en="Some people have a genetic predisposition making them more susceptible to pneumonia or complications.">بعض الأشخاص لديهم استعداد جيني يجعلهم أكثر عرضة للإصابة بالتهاب رئوي أو مضاعفات.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="card-image" src="https://i.ibb.co/4YFv8dX/psychology.jpg" alt="عوامل نفسية" loading="lazy">
+          </div>
+          <div class="flip-card-back">
+            <h3 class="lang-text" data-ar="عوامل نفسية" data-en="Psychological Factors">عوامل نفسية</h3>
+            <p class="lang-text" data-ar="التوتر أو القلق أو ضعف المناعة النفسية يمكن أن يزيد من شدة المرض." data-en="Stress, anxiety, or weak mental immunity can worsen the disease severity.">التوتر أو القلق أو ضعف المناعة النفسية يمكن أن يزيد من شدة المرض.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="card-image" src="https://i.ibb.co/Nm3T0GK/environment.jpg" alt="عوامل بيئية" loading="lazy">
+          </div>
+          <div class="flip-card-back">
+            <h3 class="lang-text" data-ar="عوامل بيئية" data-en="Environmental Factors">عوامل بيئية</h3>
+            <p class="lang-text" data-ar="التلوث والعيش في بيئة مزدحمة يزيد من فرص الإصابة بالتهاب الرئوي." data-en="Pollution and crowded living environments increase pneumonia risk.">التلوث والعيش في بيئة مزدحمة يزيد من فرص الإصابة بالتهاب الرئوي.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم مراحل المرض -->
+  <section id="phases">
+    <h2 class="lang-text" data-ar="مراحل المرض" data-en="Phases of Pneumonia">مراحل المرض</h2>
+    <div class="container">
+      <div class="phase common-card">
+        <h3 class="lang-text" data-ar="المرحلة الأولى: العدوى الأولية" data-en="Phase 1: Initial Infection">المرحلة الأولى: العدوى الأولية</h3>
+        <p class="lang-text" data-ar="البكتيريا أو الفيروسات تدخل الرئة وتبدأ الالتهاب." data-en="Bacteria or viruses enter the lungs and initiate inflammation.">البكتيريا أو الفيروسات تدخل الرئة وتبدأ الالتهاب.</p>
+      </div>
+      <div class="phase common-card">
+        <h3 class="lang-text" data-ar="المرحلة الثانية: الأعراض المبكرة" data-en="Phase 2: Early Symptoms">المرحلة الثانية: الأعراض المبكرة</h3>
+        <p class="lang-text" data-ar="السعال، الحمى، وصعوبة التنفس قد تظهر." data-en="Coughing, fever, and breathing difficulties may appear.">السعال، الحمى، وصعوبة التنفس قد تظهر.</p>
+      </div>
+      <div class="phase common-card">
+        <h3 class="lang-text" data-ar="المرحلة الثالثة: الالتهاب الشديد" data-en="Phase 3: Severe Inflammation">المرحلة الثالثة: الالتهاب الشديد</h3>
+        <p class="lang-text" data-ar="الرئة تتورم، ويزداد صعوبة التنفس." data-en="The lungs swell, and breathing becomes more difficult.">الرئة تتورم، ويزداد صعوبة التنفس.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الأعراض -->
+  <section id="symptoms">
+    <h2 class="lang-text" data-ar="الأعراض" data-en="Symptoms">الأعراض</h2>
+    <div class="symptoms-list">
+      <div class="symptom common-card">
+        <div class="symptom-icon">🤒</div>
+        <p class="lang-text" data-ar="حمى وسعال متواصل" data-en="Fever and persistent cough">حمى وسعال متواصل</p>
+      </div>
+      <div class="symptom common-card">
+        <div class="symptom-icon">😮‍💨</div>
+        <p class="lang-text" data-ar="ضيق في التنفس" data-en="Shortness of breath">ضيق في التنفس</p>
+      </div>
+      <div class="symptom common-card">
+        <div class="symptom-icon">🛌</div>
+        <p class="lang-text" data-ar="إرهاق شديد" data-en="Severe fatigue">إرهاق شديد</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم العلاج -->
+  <section id="treatment">
+    <h2 class="lang-text" data-ar="العلاج" data-en="Treatment">العلاج</h2>
+    <div class="container">
+      <div class="card common-card">
+        <h3 class="lang-text" data-ar="العلاج الدوائي" data-en="Medication">العلاج الدوائي</h3>
+        <p class="lang-text" data-ar="يمكن استخدام المضادات الحيوية لعلاج الالتهاب البكتيري." data-en="Antibiotics can be used to treat bacterial pneumonia.">يمكن استخدام المضادات الحيوية لعلاج الالتهاب البكتيري.</p>
+      </div>
+      <div class="card common-card">
+        <h3 class="lang-text" data-ar="العلاج الداعم" data-en="Supportive Care">العلاج الداعم</h3>
+        <p class="lang-text" data-ar="الراحة، شرب السوائل، وأجهزة التنفس عند الحاجة." data-en="Rest, hydration, and oxygen therapy if needed.">الراحة، شرب السوائل، وأجهزة التنفس عند الحاجة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم رفع الصورة -->
+  <section id="upload">
+    <h2 class="lang-text" data-ar="رفع صورة الأشعة" data-en="Upload X-Ray Image">رفع صورة الأشعة</h2>
+    <div id="upload-section">
+      <input type="file" id="imageInput" accept="image/*" aria-label="رفع صورة الأشعة السينية">
+      <br>
+      <img id="uploaded-image" src="" alt="صورة الأشعة المرفوعة" style="display:none;" loading="lazy">
+      <br>
+      <button id="analyzeBtn" type="button" class="analyze-btn lang-text" data-ar="تحليل الصورة" data-en="Analyze Image">تحليل الصورة</button>
+      <div id="upload-status" class="lang-text" data-ar="جارٍ التحليل..." data-en="Analyzing..." style="display:none;"></div>
+      <div id="resultsList" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="lang-text" data-ar="© 2025 PneumoDetect جميع الحقوق محفوظة" data-en="© 2025 PneumoDetect All rights reserved">© 2025 PneumoDetect جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* ===== الأنماط العامة ===== */
+html {
+  scroll-behavior: smooth; /* تمرير سلس */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  color: #1e3a8a;
+}
+
+/* الرأس وقائمة التنقل */
+header {
+  background: #383232;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  background: #404040;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+nav button {
+  background: transparent;
+  border: 2px solid #149CEA;
+  border-radius: 8px;
+  color: #fff;
+  margin: 5px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover, nav button:focus {
+  background: #149CEA;
+  outline: 2px solid #149CEA;
+  outline-offset: 2px;
+}
+
+nav button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* الصورة الخلفية */
+.background-image {
+  position: relative;
+  height: 500px;
+  text-align: center;
+  color: white;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbz9TUsjfvzxMkR-8SLynTtU4oUMtPPg_ZA&s');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  filter: brightness(50%);
+  z-index: 0;
+}
+
+.background-image h1 {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* البطاقات التفاعلية */
+.flip-card {
+  background: transparent;
+  width: 300px;
+  height: 250px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background: #1e3a8a;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 15px;
+  text-align: justify;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* الأقسام */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* فئة مشتركة للبطاقات */
+.common-card {
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+.phase { width: 250px; }
+.card { width: 300px; }
+.symptom {
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px solid #02886f;
+}
+
+.symptom:hover, .symptom:focus {
+  transform: translateY(-5px);
+}
+
+.symptom-icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* تبديل اللغة */
+.lang-toggle {
+  margin: 10px 0;
+}
+
+.lang-toggle button {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lang-toggle button.active {
+  background: #fff;
+  color: #404040;
+}
+
+/* التذييل */
+footer {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 15px 0;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* رفع الصورة */
+#upload-section {
+  margin: 20px 0;
+}
+
+#uploaded-image {
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid #02886f;
+}
+
+#upload-status {
+  margin-top: 10px;
+  color: #1e3a8a;
+}
+
+#resultsList {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* تنسيق الشرح المفصل */
+.result-container {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+.result-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.confidence-text {
+  font-style: italic;
+  color: #02886f;
+  margin-bottom: 10px;
+}
+
+.explanation-text {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.analyze-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #02886f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.analyze-btn:hover, .analyze-btn:focus {
+  background-color: #025c50;
+  outline: 2px solid #025c50;
+  outline-offset: 2px;
+}
+
+/* ألوان نتائج التحليل */
+.result-text.positive { color: red; }
+.result-text.negative { color: green; }
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+  section { padding: 30px 10px; }
+  .flip-card, .phase, .card, .symptom, .result-container {
+    width: 100%;
+    max-width: 300px;
+  }
+  nav { flex-direction: column; }
+}
